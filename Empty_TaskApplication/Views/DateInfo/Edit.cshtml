@@ -1,0 +1,25 @@
+﻿@model Empty_TaskApplication.Models.DateInfo
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.Id)
+    @Html.LabelFor(model => model.date)
+
+    @Html.EditorFor(model => model.date)
+
+
+    @Html.LabelFor(model => model.isHoliday)
+    @Html.EditorFor(model => model.isHoliday)
+
+    <input type="submit" value="Save" class="btn btn-default" />
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

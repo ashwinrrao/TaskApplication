@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Empty_TaskApplication.Models.Task>
+
+@{
+    ViewBag.Title = "Tasks";
+}
+
+<h2>Tasks</h2>
+
+<p>
+    @Html.ActionLink("Create Task", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fromDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.toDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duration)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @item.fromDate.ToShortDateString()
+        </td>
+        <td>
+            @item.toDate.ToShortDateString()
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duration)
+        </td>
+    </tr>
+}
+
+</table>

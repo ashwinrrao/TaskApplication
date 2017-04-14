@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Empty_TaskApplication.Models.DateInfo>
+
+@{
+    ViewBag.Title = "Dates";
+}
+
+<h2>Dates</h2>
+
+<p>
+    @Html.ActionLink("Create Date", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isHoliday)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @item.date.Date.ToShortDateString()
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isHoliday)
+        </td>
+    </tr>
+}
+
+</table>

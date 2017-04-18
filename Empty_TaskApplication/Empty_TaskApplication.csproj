@@ -168,7 +168,9 @@
     <Content Include="Scripts\jquery-ui-1.12.1.js" />
     <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\DateInfo\Index.cshtml" />
     <Content Include="Views\DateInfo\Create.cshtml" />
     <Content Include="Views\Task\Index.cshtml" />
@@ -185,6 +187,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DateInfo.cs" />
     <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\TaskView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\TaskDbContext.cs" />
   </ItemGroup>
@@ -198,7 +201,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.12.4.min.map" />
     <Content Include="Views\DateInfo\Details.cshtml" />
+    <Content Include="Views\Task\Edit.cshtml" />
     <Content Include="Views\DateInfo\Edit.cshtml" />
+    <Content Include="Views\DateInfo\Delete.cshtml" />
+    <Content Include="Views\Task\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,35 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
 namespace Empty_TaskApplication.Models
 {
-    public class Task
+    public class TaskView
     {
         public int Id { get; set; }
         [DisplayName("Task Name")]
         public string name { get; set; }
         [DisplayName("From Date")]
-        [Required]
         public DateTime fromDate { get; set; }
         [DisplayName("To Date")]
-        [Required]
         public DateTime toDate { get; set; }
+        [DisplayName("Duration")]
+        public int? duration { get; set; }
 
-        public Task()
+        public TaskView(Task task)
         {
-
+            Id = task.Id;
+            name = task.name;
+            fromDate = task.fromDate;
+            toDate = task.toDate;
         }
 
-        public Task(TaskView taskView)
+        public TaskView()
         {
-            Id = taskView.Id;
-            name = taskView.name;
-            fromDate = taskView.fromDate;
-            toDate = taskView.toDate;
+
         }
     }
 }

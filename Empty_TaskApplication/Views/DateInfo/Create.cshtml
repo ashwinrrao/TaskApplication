@@ -9,7 +9,8 @@
 {
 <body>
     
-    @Html.LabelFor(model => model.date) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @Html.EditorFor(model => model.date)
+    @Html.LabelFor(model => model.date) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <input type="date" name="date" />
+    @Html.ValidationMessageFor(model => model.date,"* Please enter date", new { @class = "text-danger" })
     <br /><br />
     @Html.LabelFor(model => model.isHoliday) &nbsp;&nbsp;&nbsp; @Html.EditorFor(model => model.isHoliday)
     <br /><br />

@@ -11,9 +11,9 @@
 
         @Html.LabelFor(model => model.name) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @Html.EditorFor(model => model.name)
         <br /><br />
-        @Html.LabelFor(model => model.fromDate) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @Html.EditorFor(model => model.fromDate)
+        @Html.LabelFor(model => model.fromDate) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="date" name="fromDate" />
         <br /><br />
-        @Html.LabelFor(model => model.toDate) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @Html.EditorFor(model => model.toDate)
+        @Html.LabelFor(model => model.toDate) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="date" name="toDate" />
         <br /><br />
         <input type="submit" value="Create" class="btn btn-default" />
     </body>
